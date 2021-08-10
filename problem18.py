@@ -19,7 +19,7 @@ for row_index in range(len(triangle) - 2, -1, -1):
     for col_index, num in enumerate(row):
         if num + triangle[row_index + 1][col_index] > num + triangle[row_index + 1][col_index + 1]:
             triangle[row_index][col_index] += triangle[row_index + 1][col_index]
-        elif num + triangle[row_index + 1][col_index + 1] > num + triangle[row_index + 1][col_index]:
+        else:
             triangle[row_index][col_index] += triangle[row_index + 1][col_index + 1]
 
 print(triangle[0][0])
